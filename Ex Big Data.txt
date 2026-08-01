@@ -1,0 +1,35 @@
+Exercício de BIG DATA -- Esthéfano Venícius Rosa, 19969 GEC, C11 A
+
+
+1. Big Data é definido por um enorme volume de dados gerados continuamente por pessoas, empresas, dispositivos e sistemas. Seus grandes desafios são, armazenar, processar e transformar as informações em um conhecimento útil para a aplicação.
+
+2. Postagens em redes sociais, e-mails, fotografias, imagens médicas e vídeos.
+
+3. Dados estruturados, semiestruturados e Não Estruturados.
+
+4. Os 5 V's são: *Volume* muito grande de dados e em uma *velocidade* muito alta, verificar a *Veracidade* deles, transformá-los em informações com *valor* para o auxilio de decisões, trabalhar com uma grande *variedade* de formatos de dados.
+
+5. Velocidade.
+
+6. Volume se refere principalmente a quantidade de dados envolvidos, podendo ter os mesmos formatos ou formatos diferentes, já variedade diz a respeito do numero de formatos diferentes que podemos ter dos dados, como planilhas, áudios, imagens e vídeos, por exemplo.
+
+7. 
+   1- Não estruturados. Tecnicamente qualquer informação é um dado, seja curtida, comentário, republicações, compartilhamentos e etc;
+   2- Semiestruturados. Posso dizer que esta "estruturado" pois podemos ver as tags, como nome do funcionário, cargo, data de contratação, tipo de projeto;
+   3- Estruturados; São as divisões das colunas das tabelas, como nome, matricula, curso, nota e numero de alunos matriculados.
+
+8.
+   1- Conscientização penso que seja a partir do momento que você descobre um possível problema e tem que achar uma forma de estabelecer o rumo que vai seguir utilizando perguntas.
+   2- Compreensão seria associar os datasets para que se tenha uma melhor eficácia nas perguntas para encontrar o problema.
+   3- Descoberta talvez seja quando você já tem tudo planejado e precisa reunir as melhores informações e ferramentas para o seu resultado ser o ideal.
+   4- Análise é quando vemos todos os cenários possíveis para a "resolução" do problema e precisa alinhar isto com o produto final.
+   5- Divulgação é onde mostramos como a pesquisa e análise dos dados nos resultou em algo que seja bom e de grande valor para os envolvidos. Por isso, ter uma divulgação boa e limpa pode garantir bons resultados no futuro da sua aplicação.
+
+9. b-) Compreensão
+
+10.
+ 1. Conscientização, primeiro conseguir "assimilar" o problema ao cotidiano escolar e gerar as perguntas que seriam feitas;
+ 2. Compreensão, entender ou elaborar uma melhor forma de colocar os datasets para criar as melhores perguntas e coletar o melhor tipo de dado sobre a situação;
+ 3. Descoberta, limpar as informações que posso julgar como "inuteis" e reuniar as mais importantes possíveis para o meu plano;
+ 4. Análise, compreender oque os dados que sobraram tem em  comum e poder relacioná-los para poder plotar as descobertas de uma forma de boa visualização;
+ 5. Divulgação, mostrar as informações reunidas e alinhadas com o objetivo inicial e evidenciar os maiores e que mais tem a ver com o motivo da evasão dos alunos.
