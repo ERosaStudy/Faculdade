@@ -61,6 +61,3 @@ print(f'Operação entre matriz e escalar(Broadcast)')
 print(matriz*5)
 print('')
 print(matriz/2)
-
-
-##ALEATORIEDADE
