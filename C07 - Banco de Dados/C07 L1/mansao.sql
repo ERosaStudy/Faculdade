@@ -1,6 +1,8 @@
 USE laboratorio;
 
-DROP CREATE TABLE IF NOT EXISTS investigacao (
+DROP TABLE IF EXISTS investigacao;
+	
+CREATE TABLE IF NOT EXISTS investigacao (
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 idade INT,
@@ -59,4 +61,5 @@ INSERT INTO investigacao (nome, idade, profissao,
  possui_alibi, quantidade_evidencias, nivel_suspeita) VALUES ('Helena Duarte',
  31,'Restauradora de Arte', 'Campinas',FALSE,'22:50:00',FALSE,1,2);
 
+SELECT * FROM investigacao
  
