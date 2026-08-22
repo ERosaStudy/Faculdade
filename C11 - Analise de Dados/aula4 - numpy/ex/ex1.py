@@ -104,7 +104,23 @@ print("Vetor resultante de 9 elementos:\n", vetor_ex5)
 
 ## Exercicio 6
 
+print("\n--- Exercício 6 ---")
+arraex6 = np.arange(10,30,2)
 
+print(f"Maior valor: {arraex6.max()} (Índice: {arraex6.argmax()})")
+print(f"Menor valor: {arraex6.min()} (Índice: {arraex6.argmin()})")
+print(f"Soma total: {arraex6.sum()}")
 
 ## Exercicio 7
 
+print("\n--- Exercício 7 ---")
+np.random.seed(7)
+vet1 = np.random.randint(1, 11, 5)  
+vet2 = np.random.randint(1, 11, 5)
+
+vet_conca = np.concatenate((vet1, vet2))
+mtz_final = vet_conca.reshape(2, 5)
+
+print("Vetor 1:", vet1)
+print("Vetor 2:", vet2)
+print("Matriz final (2x5):\n", mtz_final)
