@@ -61,5 +61,10 @@ INSERT INTO investigacao (nome, idade, profissao,
  possui_alibi, quantidade_evidencias, nivel_suspeita) VALUES ('Helena Duarte',
  31,'Restauradora de Arte', 'Campinas',FALSE,'22:50:00',FALSE,1,2);
 
-SELECT * FROM investigacao
+-- update 
+UPDATE investigacao SET nivel_suspeita = 3 WHERE id = 2;
+
+SELECT * FROM investigacao;
+
+
  
