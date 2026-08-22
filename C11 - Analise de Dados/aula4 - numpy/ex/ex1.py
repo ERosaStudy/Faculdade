@@ -92,6 +92,15 @@ print("   Números que aparecem exatamente 2 vezes:", duplicados)
 
 ## Exercicio 5
 
+print("\n--- Exercício 5 ---")
+mtz_zeros = np.zeros((3, 3))
+mtz_uns = np.ones((3, 3))
+escalar = 5
+
+resultado_ex5 = (mtz_zeros + mtz_uns) * escalar
+vetor_ex5 = resultado_ex5.reshape(9)
+
+print("Vetor resultante de 9 elementos:\n", vetor_ex5)
 
 ## Exercicio 6
 
