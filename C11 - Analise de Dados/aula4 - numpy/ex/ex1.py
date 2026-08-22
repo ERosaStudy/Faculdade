@@ -68,7 +68,27 @@ print(f"Dimensões: {linhas}x{colunas} | Total: {total_elementos} elementos")
 print(f"Poderia se tornar um vetor unidimensional com número {tipo} de elementos.")
 
 ## Exercicio 4
+print("\n--- Exercício 4 ---")
 
+mtz_ex4 = np.random.randint(1, 51, (4, 4))  
+print("Matriz:\n", mtz_ex4)
+
+media_linhas = mtz_ex4.mean(axis=1)
+media_colunas = mtz_ex4.mean(axis=0)
+print("a) Média das linhas:", media_linhas)
+print("   Média das colunas:", media_colunas)
+
+print(f"b) Maior média de linha: {media_linhas.max():.2f}")
+print(f"   Maior média de coluna: {media_colunas.max():.2f}")
+
+
+valores, contagens = np.unique(mtz_ex4, return_counts=True)
+print("c) Aparições de cada número:")
+for val, count in zip(valores, contagens):
+    print(f"   Número {val}: {count} vez(es)")
+
+duplicados = valores[contagens == 2]
+print("   Números que aparecem exatamente 2 vezes:", duplicados)
 
 ## Exercicio 5
 
