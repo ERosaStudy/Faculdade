@@ -18,3 +18,4 @@ print (np.unique(arr))
 ##printando contando o numero de repetiçoes
 
 print (np.unique(arr,return_counts=True))
+    

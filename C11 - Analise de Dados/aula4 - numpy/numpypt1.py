@@ -23,3 +23,4 @@ print (matriz)
 
 matriz1 = numpy.ones([5,3]) # --> numero de linhas e numero de colunas com um, matriz 3x5
 print(matriz1)
+
