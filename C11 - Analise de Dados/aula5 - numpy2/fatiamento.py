@@ -25,3 +25,28 @@ print('')
 print(mtz>5)
 print('')
 
+
+##TEXTOS
+
+arr = np.array(['Python', 'Numpy', 'Pandas', 'Flamengo'])
+print(arr)
+print('')
+
+##buscano caracteres especificios no array e mostrando o indice
+##se printar -1 é pq não tem no vetor, se encontra, mostra o lugar. De 0 a x 
+print(np.char.find(arr,'u'))
+print('')
+
+##buscando palavra que começa com certo caracter
+##se printar false é pq não tem no vetor, se tem mostra TRUE
+
+print(np.char.startswith(arr,'N'))
+print ('')
+
+##printando o array inteiro em letra maiscula
+
+print(np.char.upper(arr))
+print('')
+
+print(np.char.isalpha(arr))  ##verificand se todos os caracteres no array são letras
+print(np.char.isalnum(arr))  ##verificando se todos os caracters no array são alfanuméricos
