@@ -126,15 +126,19 @@ FROM investigacao;
 -- soma total de evidencias
 SELECT SUM(quantidade_evidencias) AS total_evidencias 
 FROM investigacao;
-
+	
 -- agrupando por profissão e contando 
+SELECT profissao, COUNT(*) AS total_convidados FROM investigacao GROUP BY profissao;
+
 
 -- média de nivel de suspeita por cidade
+SELECT cidade, AVG(nivel_suspeita) AS media_nivel_suspeita FROM investigacao GROUP BY cidade;
 
 -- SUSPEITO PRINCIPAL 
 
-SELECT * FROM investigacao WHERE estava_na_sala_do_cofre = TRUE AND possui_alibi = FALSE 
-AND nivel_suspeita >= 3 AND quantidade_evidencias >= 2 AND nome LIKE 'C%' OR 'A%';
+SELECT * FROM investigacao WHERE horario_visto = '23:00:00' AND estava_na_sala_do_cofre = TRUE AND possui_alibi = FALSE 
+AND nivel_suspeita > 3 AND quantidade_evidencias >= 2 AND (nome LIKE 'C%' OR nome LIKE 'A%')
+ORDER BY nivel_suspeita DESC LIMIT 1;
 
 
 SET SQL_SAFE_UPDATES =0;
