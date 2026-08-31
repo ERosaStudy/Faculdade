@@ -62,9 +62,35 @@ INSERT INTO investigacao (nome, idade, profissao,
  31,'Restauradora de Arte', 'Campinas',FALSE,'22:50:00',FALSE,1,2);
 
 -- update 
-UPDATE investigacao SET nivel_suspeita = 3 WHERE id = 2;
 
-SELECT * FROM investigacao;
+UPDATE investigacao 
+SET nivel_suspeita = 3 WHERE id = 2;
+
+UPDATE investigacao
+SET cidade = 'Cachoeira de Minas' WHERE nome = 'Helena Duarte';
+
+UPDATE investigacao	
+SET nivel_suspeita = nivel_suspeita +1 WHERE estava_na_sala_do_cofre = TRUE;
+
+
+
+-- delete
+
+DELETE FROM investigacao 
+WHERE nivel_suspeita <2 AND possui_alibi = TRUE AND quantidade_evidencias = 0;
+
+DELETE FROM investigacao
+WHERE nivel_suspeita =1;
+
+-- select todos os registros
+
+USE laboratorio;
+SELECT * FROM investigacao; 
+
+-- select nome e profissão
+
+
+
 
 
  
