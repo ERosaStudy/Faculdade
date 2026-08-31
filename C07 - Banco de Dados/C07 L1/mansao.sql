@@ -83,13 +83,61 @@ DELETE FROM investigacao
 WHERE nivel_suspeita =1;
 
 -- select todos os registros
-
 USE laboratorio;
 SELECT * FROM investigacao; 
 
 -- select nome e profissão
+SELECT nome, profissao FROM investigacao;
+
+-- select em ordem decrescente de idade
+SELECT * FROM investigacao ORDER BY idade DESC;
+
+-- select quem estava na sala do cofre
+SELECT * FROM investigacao WHERE estava_na_sala_do_cofre = TRUE;
+
+-- select nivel de suspeita > 3 
+SELECT * FROM investigacao WHERE nivel_suspeita > 3;
+
+-- select idade entre 30 e 50 
+SELECT * FROM investigacao WHERE idade BETWEEN 30 AND 50;
+
+-- select nome começando com 'A'
+SELECT * FROM investigacao WHERE nome LIKE 'A%';
+
+-- select nome terminando com "O"
+SELECT * FROM investigacao WHERE nome LIKE '%O';
+
+-- select profissão que contenha "ART"
+SELECT * FROM investigacao WHERE profissao LIKE '%Art%';
+
+-- select convidados de São Paulo, Campinas ou Santos
+SELECT * FROM investigacao WHERE cidade IN ('São Paulo',' Campinas','Santos');
+
+-- contando todos os convidados
+SELECT COUNT(*) AS total_convidados 
+FROM investigacao;
+
+-- maior e menor nivel de suspeita
+SELECT 
+    MAX(nivel_suspeita) AS maior_nivel_suspeita,
+    MIN(nivel_suspeita) AS menor_nivel_suspeita
+FROM investigacao;
+
+-- soma total de evidencias
+SELECT SUM(quantidade_evidencias) AS total_evidencias 
+FROM investigacao;
+
+-- agrupando por profissão e contando 
+
+-- média de nivel de suspeita por cidade
+
+-- SUSPEITO PRINCIPAL 
+
+SELECT * FROM investigacao WHERE estava_na_sala_do_cofre = TRUE AND possui_alibi = FALSE 
+AND nivel_suspeita >= 3 AND quantidade_evidencias >= 2 AND nome LIKE 'C%' OR 'A%';
 
 
+SET SQL_SAFE_UPDATES =0;
 
 
 
