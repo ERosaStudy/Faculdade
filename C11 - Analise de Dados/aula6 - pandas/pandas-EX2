@@ -1,0 +1,56 @@
+import pandas as pd
+
+# Carregamento do Dataset (Certifique-se de que o arquivo 'paises.csv' está na mesma pasta)
+df = pd.read_csv('paises.csv')
+
+# Limpeza básica dos nomes das colunas para evitar erros com espaços indesejados
+df.columns = df.columns.str.strip()
+
+print("--- QUESTÃO 1 ---")
+# Quais são os países da OCEANIA e quantos são[cite: 1]
+oceania_paises = df[df['Region'].str.contains('OCEANIA', case=False, na=False)]
+print("Países da OCEANIA:")
+print(oceania_paises['Country'])
+print(f"\nQuantidade de países da OCEANIA: {len(oceania_paises)}\n")
+
+
+print("--- QUESTÃO 2 ---")
+# Encontrar o nome e a região do país com a maior população[cite: 1]
+df['Population'] = pd.to_numeric(df['Population'], errors='coerce')
+pais_maior_pop = df.loc[df['Population'].idxmax()]
+print(f"País com a maior população: {pais_maior_pop['Country']}")
+print(f"Região: {pais_maior_pop['Region']}")
+print(f"População: {pais_maior_pop['Population']}\n")
+
+
+print("--- QUESTÃO 3 ---")
+# Agrupar os países por Regiões e mostrar a média de alfabetização (Literacy (%))[cite: 1]
+# Tratamento caso os valores usem vírgula como separador decimal
+df['Literacy (%)'] = pd.to_numeric(df['Literacy (%)'].astype(str).str.replace(',', '.'), errors='coerce')
+media_literacia = df.groupby('Region')['Literacy (%)'].mean()
+print("Média de alfabetização por região:")
+print(media_literacia)
+print("\n")
+
+
+print("--- QUESTÃO 4 ---")
+# Buscar países sem costa marítima (Coastline == 0) e guardar em 'noCoast.csv'[cite: 1]
+df['Coastline (coast/area ratio)'] = pd.to_numeric(df['Coastline (coast/area ratio)'].astype(str).str.replace(',', '.'), errors='coerce')
+sem_costa = df[df['Coastline (coast/area ratio)'] == 0]
+sem_costa['Country'].to_csv('noCoast.csv', index=False)
+print(f"Ficheiro 'noCoast.csv' gerado com sucesso! Total de países sem costa marítima: {len(sem_costa)}\n")
+
+
+print("--- QUESTÃO 5 ---")
+# Função para avaliar a taxa de mortalidade (Deathrate) e criar a coluna 'Humanitarian Help'[cite: 1]
+df['Deathrate'] = pd.to_numeric(df['Deathrate'].astype(str).str.replace(',', '.'), errors='coerce')
+
+def avalia_mortalidade(deathrate):
+    if pd.isna(deathrate):
+        return 'Unknown'
+    return 'Balanced' if deathrate < 9 else 'Urgent'
+
+df['Humanitarian Help'] = df['Deathrate'].apply(avalia_mortalidade)
+
+print("Amostra do Dataset com a nova coluna 'Humanitarian Help':")
+print(df[['Country', 'Deathrate', 'Humanitarian Help']].head(10))
